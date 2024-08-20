@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "ff7fd2c2-a147-4671-b4a6-1a7f2d25be29",
+		"name": "Canvas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10836123"
+	},
+	"item": [
+		{
+			"name": "announcement",
+			"item": [
+				{
+					"name": "all announcements of cursus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/announcement/?cursus=2315465465487",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"announcement",
+								""
+							],
+							"query": [
+								{
+									"key": "cursus",
+									"value": "2315465465487"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Announcement",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cursus\": 2315465465487,\r\n    \"content\": \"Hello world\",\r\n    \"announcer\": 4657876548787\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/announcement/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"announcement",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commenter\": 21348578645498,\r\n    \"content\": \"Not hello!\",\r\n    \"announcement\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/announcement/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"announcement",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete announcement",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/announcement?announcement=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"announcement"
+							],
+							"query": [
+								{
+									"key": "announcement",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "Create new course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Football\",\n    \"period\": \"D\",\n    \"branche\": \"sport\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/course",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get course by title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/course/Backend%20Programming%203",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"Backend%20Programming%203"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update course by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"CISQ 2\",\n    \"period\": \"2023 - 2024 C\",\n    \"date\": \"2024-02-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/course/update/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete course by title",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/course/delete/CISQ%202",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"delete",
+								"CISQ%202"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get count courses per branche",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/course/branches/count",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"branches",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get count courses per period",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/course/periods/a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"periods",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new material",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subject\": \"monolit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/course/Backend%20Programming%203/material",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"Backend%20Programming%203",
+								"material"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get material of an course by subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/course/Backend%20Programming%203/monolit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"Backend%20Programming%203",
+								"monolit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a module in material",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"How to build an monolit\",\n    \"deadline\": \"2024-05-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/course/Backend%20Programming%203/monolit/module",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"Backend%20Programming%203",
+								"monolit",
+								"module"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

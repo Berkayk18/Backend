@@ -1,0 +1,8 @@
+Volgende dingen zijn gemaakt:
+2 enteties namelijk Announcement en Comment.
+1 contoller genaamt AnnouncementController.
+1 repositorie genaamt AnnouncementRepository.
+1 Service genaamt AnnouncementService.
+
+Code allows for the creation and deletion of announcements.
+Code allows for the adding of comments to said announcements.

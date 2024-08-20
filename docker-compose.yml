@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  db:
+    build: docker
+    ports:
+      - "15432:5432"
+    environment:
+      - "POSTGRES_USER=admin"
+      - "POSTGRES_PASSWORD=admin"
+      - "DB_APP_USER=hulp-canvas"
+      - "DB_APP_PASS=hulp-canvas"
+      - "DB_BASE_NAMES=monolith,course,planning,progress"
+    volumes:
+      - "./docker/data:/var/data/db"
+  rabbitmq:
+      container_name: rabbitmq
+      image: rabbitmq:management
+      healthcheck:
+          test: rabbitmq-diagnostics status
+          interval: 4s
+          timeout: 4s
+          retries: 10
+      ports:
+          - 5672:5672
+          - 15672:15672

@@ -1,0 +1,10 @@
+urllib3==2.1.0
+flask==3.0.2
+Werkzeug >= 2.3.7
+click>=8.1.7
+pika
+requests
+types-requests
+python-dotenv
+pymongo[srv]
+dataclasses-json
