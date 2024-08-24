@@ -1,3 +1,0 @@
-If you want to run this project us the "./bin/run_local_deployment" to rune a docker container on port 8083.
-
-If you want to run this project without docker you can do so by installing nix os and running the nix-shell command and the doing "./bin/canvasctl run webserver"

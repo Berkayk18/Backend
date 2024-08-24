@@ -1,8 +1,0 @@
-{
-  "name": "courseplanning_devcontainer_spring",
-  "dockerComposeFile": "../docker-compose.yml",
-  "init": true,
-  "service": "spring",
-  "remoteUser": "root",
-  workspaceFolder: "/app",
-}
