@@ -19,9 +19,7 @@
 	</properties>
 	
 	<modules>
-		<module>monoliet</module>
-		<module>course</module>
-		<module>courseplanning</module>
+		<module>timetable</module>
 	</modules>
 
 	<dependencies>
