@@ -1,11 +1,11 @@
-package nl.hu.inno.humc.monoliet.course;
+package nl.hu.inno.humc.schedule.timetable;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CourseStartup {
+public class TimetableStartup {
     public static void main(String[] args) {
-        SpringApplication.run(CourseStartup.class, args);
+        SpringApplication.run(TimetableStartup.class, args);
     }
 }
